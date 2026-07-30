@@ -3,7 +3,7 @@
 Willkommen bei der Dokumentation des **Toolkit Bestandeskarte (TBk)** — automatisiert generierte forstliche Bestandeskarten für die Schweiz, entwickelt an der BFH-HAFL.
 
 !!! info "Prototyp"
-    Dies ist ein **MkDocs-Material-Prototyp** zur Evaluation als neue Plattform für die TBk-Dokumentation (bisher: `Handbuch/TBk_Manuel_V11_*.docx`). Nur das Kapitel [Einführung](einfuehrung.md) enthält bereits real migrierten Inhalt inkl. Original-Abbildungen — die übrigen Kapitel sind Platzhalter zur Demonstration der Nav-Struktur.
+    Dies ist ein **MkDocs-Material-Prototyp** zur Evaluation als neue Plattform für die TBk-Dokumentation (bisher: `Handbuch/TBk_Manuel_V11_*.docx`). Alle Kapitel sind bereits real aus dem Handbuch migriert (Text, Tabellen, Original-Abbildungen) und auf Deutsch sowie Français verfügbar. English ist bisher nur für diese Startseite übersetzt — die übrigen Seiten fallen ohne Übersetzung auf Deutsch zurück.
 
 ## Über TBk
 

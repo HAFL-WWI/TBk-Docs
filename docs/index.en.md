@@ -3,7 +3,7 @@
 Welcome to the documentation of **Toolkit Bestandeskarte (TBk)** — automatically generated forest stand maps for Switzerland, developed at BFH-HAFL.
 
 !!! info "Prototype"
-    This is an **MkDocs Material prototype** to evaluate a new platform for TBk documentation (previously: `Handbuch/TBk_Manuel_V11_*.docx`). Only the [Introduction](einfuehrung.md) chapter contains actually migrated content (including original figures) so far — the remaining chapters are placeholders demonstrating the nav structure.
+    This is an **MkDocs Material prototype** to evaluate a new platform for TBk documentation (previously: `Handbuch/TBk_Manuel_V11_*.docx`). All chapters have already been migrated from the Handbuch (text, tables, original figures) and are available in Deutsch and Français. English is so far only translated for this start page — the remaining pages fall back to German where no translation exists.
 
 ## About TBk
 

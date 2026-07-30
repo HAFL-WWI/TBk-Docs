@@ -3,7 +3,7 @@
 Bienvenue dans la documentation du **Toolkit Bestandeskarte (TBk)** — cartes de peuplement forestier générées automatiquement pour la Suisse, développé à la BFH-HAFL.
 
 !!! info "Prototype"
-    Ceci est un **prototype MkDocs-Material** pour évaluer une nouvelle plateforme pour la documentation TBk (jusqu'ici : `Handbuch/TBk_Manuel_V11_*.docx`). Seul le chapitre [Introduction](einfuehrung.md) contient déjà du contenu réellement migré (y compris les figures originales) — les autres chapitres sont des placeholders démontrant la structure de navigation.
+    Ceci est un **prototype MkDocs-Material** pour évaluer une nouvelle plateforme pour la documentation TBk (jusqu'ici : `Handbuch/TBk_Manuel_V11_*.docx`). Tous les chapitres ont déjà été migrés depuis le manuel (texte, tableaux, figures originales) et sont disponibles en Deutsch et en Français. L'anglais n'est pour l'instant traduit que pour cette page d'accueil — les autres pages basculent sur l'allemand faute de traduction.
 
 ## À propos de TBk
 
