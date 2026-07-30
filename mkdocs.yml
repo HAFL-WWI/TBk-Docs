@@ -11,13 +11,15 @@ theme:
   name: material
   language: de
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
+    # no `media` query on purpose: always starts in light mode regardless of
+    # OS/browser dark-mode preference, since the migrated Handbuch screenshots
+    # are designed for a white background. Users can still switch manually
+    # via the toggle (remembered per-browser via localStorage).
+    - scheme: default
       toggle:
         icon: material/brightness-7
         name: Dark Mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+    - scheme: slate
       toggle:
         icon: material/brightness-4
         name: Light Mode
@@ -28,6 +30,9 @@ theme:
     - content.action.edit
   icon:
     repo: fontawesome/brands/github
+
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - admonition

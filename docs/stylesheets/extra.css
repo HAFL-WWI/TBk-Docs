@@ -1,0 +1,8 @@
+/* Migrated Handbuch screenshots/figures have a white background baked in.
+   In dark mode (slate scheme) they'd otherwise sit as a harsh white block
+   directly on the dark page - wrap them in a light card instead. */
+[data-md-color-scheme="slate"] .md-typeset img {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 0.4rem;
+}
