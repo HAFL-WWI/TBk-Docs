@@ -32,3 +32,12 @@ Automatisch beim Build via `mkdocs-to-pdf`-Plugin (siehe `mkdocs.yml`), Output u
 ## Deployment
 
 GitHub Actions Workflow (`.github/workflows/deploy.yml`) baut und deployt bei jedem Push auf `main` automatisch nach GitHub Pages.
+
+## Migration aus dem Handbuch (docx)
+
+`scripts/migrate_handbuch.py` migriert Text + Abbildungen aus `Handbuch/TBk_Manuel_V11_DE.docx` und `_FR.docx` direkt in die entsprechenden `docs/*.md`/`*.fr.md`-Dateien (überschreibt bestehende Inhalte). Nützlich, um nach einer Handbuch-Aktualisierung neu zu migrieren. Vergleicht dabei automatisch die Bilder-Anzahl pro Kapitel zwischen DE/FR und warnt bei Abweichungen (kann auf echte Lücken im Quelldokument hinweisen, vgl. Migrations-Hinweis in `datenquellen/vhm.md`). `scripts/align_tables.py <datei.md>` richtet danach alle Markdown-Tabellen im Rohtext aus.
+
+```bash
+python scripts/migrate_handbuch.py
+for f in $(find docs -name "*.md"); do python scripts/align_tables.py "$f"; done
+```
