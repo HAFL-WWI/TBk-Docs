@@ -1,0 +1,77 @@
+site_name: TBk Dokumentation
+site_description: Dokumentation des Toolkit Bestandeskarte (TBk) - BFH-HAFL
+site_url: https://HAFL-WWI.github.io/TBk-Docs/
+repo_url: https://github.com/HAFL-WWI/TBk-Docs
+repo_name: HAFL-WWI/TBk-Docs
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: de
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Dark Mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Light Mode
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - content.action.edit
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: de
+          name: Deutsch
+          default: true
+          build: true
+        - locale: fr
+          name: Français
+          build: true
+        - locale: en
+          name: English
+          build: true
+  - to-pdf:
+      cover_subtitle: "TBk Dokumentation (Prototyp)"
+      output_path: pdf/tbk-dokumentation.pdf
+
+nav:
+  - Start: index.md
+  - Glossar: glossar.md
+  - Einführung: einfuehrung.md
+  - TBk-Karten:
+      - Grundlagen: tbk-karten/grundlagen.md
+      - Veränderungen Oberschicht: tbk-karten/veraenderungen-oberschicht.md
+      - Vertikale Struktur: tbk-karten/vertikale-struktur.md
+      - Zusatzinfos: tbk-karten/zusatzinfos.md
+  - Abgrenzung & Beschreibung:
+      - Grundprinzipien: abgrenzung-beschreibung/grundprinzipien.md
+      - Funktionsweise: abgrenzung-beschreibung/funktionsweise.md
+      - Darstellung: abgrenzung-beschreibung/darstellung.md
+  - Datenquellen:
+      - Vegetationshöhenmodell: datenquellen/vhm.md
+      - Wichtigste Quellen: datenquellen/wichtigste-quellen.md
+  - Anhang:
+      - Videos: anhang/videos.md
+      - Entwicklungsstufen: anhang/entwicklungsstufen.md
+      - Vorratsschätzung: anhang/vorratsschaetzung.md
