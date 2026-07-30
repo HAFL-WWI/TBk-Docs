@@ -48,9 +48,49 @@ plugins:
         - locale: fr
           name: Français
           build: true
+          nav_translations:
+            Start: Accueil
+            Glossar: Glossaire
+            Einführung: Introduction
+            TBk-Karten: Cartes TBk
+            Grundlagen: Informations de base
+            Veränderungen Oberschicht: Changements strate supérieure
+            Vertikale Struktur: Structure verticale
+            Zusatzinfos: Informations complémentaires
+            Abgrenzung & Beschreibung: Formation et description
+            Grundprinzipien: Principes de base
+            Funktionsweise: Fonctionnement de TBk
+            Darstellung: Représentation
+            Datenquellen: Sources de données
+            Vegetationshöhenmodell: Modèle de hauteur (MHV)
+            Wichtigste Quellen: Sources principales
+            Anhang: Annexe
+            Videos: Vidéos
+            Entwicklungsstufen: Stades de développement
+            Vorratsschätzung: Estimation du matériel sur pied
         - locale: en
           name: English
           build: true
+          nav_translations:
+            Start: Home
+            Glossar: Glossary
+            Einführung: Introduction
+            TBk-Karten: TBk Maps
+            Grundlagen: Basics
+            Veränderungen Oberschicht: Changes in Upper Layer
+            Vertikale Struktur: Vertical Structure
+            Zusatzinfos: Additional Information
+            Abgrenzung & Beschreibung: Delineation & Description
+            Grundprinzipien: Basic Principles
+            Funktionsweise: How TBk Works
+            Darstellung: Visualization
+            Datenquellen: Data Sources
+            Vegetationshöhenmodell: Vegetation Height Model
+            Wichtigste Quellen: Main Sources
+            Anhang: Appendix
+            Videos: Videos
+            Entwicklungsstufen: Development Stages
+            Vorratsschätzung: Volume Estimation
   - to-pdf:
       cover_subtitle: "TBk Dokumentation (Prototyp)"
       output_path: pdf/tbk-dokumentation.pdf
