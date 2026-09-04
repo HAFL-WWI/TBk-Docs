@@ -12,11 +12,8 @@
 
 | Version | Beschreibung |
 | --- | --- |
-| **TBk Plugin** (aktuell) | Neueste Version, wird laufend aktualisiert. Enthält alle Funktionen inkl. der regionsweisen Berechnung. Download: *[TBk Plugin Download-Link — TODO: URL ergänzen]* |
-| **TBk Core** (stabil) | Bewährte Version mit allen Funktionen bis Oktober 2025, getestet mit QGIS 3.16–3.44. Wird **nicht mehr weiterentwickelt** und enthält **keine** regionsweise Berechnung. Kann **parallel** zur aktuellen Version installiert werden. Download: *[TBk Core Download-Link — TODO: URL ergänzen]* |
-
-!!! note "TODO"
-    Die konkreten Download-Links fehlen noch hier (aus der Zwischenablage gingen beim Einfügen nur die Link-Texte, nicht die URLs mit). Bitte die zwei Links nachtragen.
+| **TBk Plugin** (aktuell) | Neueste Version, wird laufend aktualisiert. Enthält alle Funktionen inkl. der regionsweisen Berechnung. [Download ↗](https://nextcloud.bfh.science/index.php/s/Fmmr55zssrLAnfH) |
+| **TBk Core** (stabil) | Bewährte Version mit allen Funktionen bis Oktober 2025, getestet mit QGIS 3.16–3.44. Wird **nicht mehr weiterentwickelt** und enthält **keine** regionsweise Berechnung. Kann **parallel** zur aktuellen Version installiert werden. [Download ↗](https://nextcloud.bfh.science/index.php/s/Pw46A2GCqMDt2Gn) |
 
 ## Installation als ZIP-Datei
 

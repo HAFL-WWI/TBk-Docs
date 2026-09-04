@@ -24,6 +24,12 @@ Eingabedaten (siehe auch [Datensätze](datensaetze.md)):
 - Mischungsgrad-Raster (MG, optional): Nadelholzanteil in %
 - Perimeter (Maske) zum Zuschneiden
 
+!!! warning "Achtung: Skalierung des Mischungsgrads (MG)"
+    Das Preprocessing-Werkzeug erwartet den Mischungsgrad standardmässig mit Werten **0–10'000** (Default des LFI-Mischungsgrads), wobei 10'000 einem Nadelholzanteil von 100.00 % entspricht. Das steuert der erweiterte Parameter **„Rescale Forest mixture degree values“** (Default: `100`).
+
+    - Enthält das Eingaberaster bereits Werte **0–100**: den Faktor von `100` auf `1` setzen (keine Skalierung).
+    - Zeigt das Eingaberaster stattdessen den **Laubholz**-Anteil (100 = 100 % Laubholz / 0 % Nadelholz) statt des Nadelholz-Anteils: das Raster vorher mit `100 − Rasterwert` umkehren, bevor es als Eingabe verwendet wird.
+
 Erzeugt die vier Eingabe-Raster für den Hauptworkflow: `VHM_10m.tif`, `VHM_150cm.tif`, `MG_10m.tif`, `MG_10m_binary.tif` (die beiden MG-Dateien nur, wenn ein Mischungsgrad-Raster angegeben wurde).
 
 Wird das Werkzeug mehrfach ausgeführt, versucht es bereits vorhandene Ausgabedateien automatisch zu löschen (Überschreiben ist nicht möglich) — das funktioniert nicht zuverlässig, wenn eine Datei noch anderswo geöffnet ist. Im Zweifel vorher manuell löschen oder einen anderen Ausgabeort/-namen wählen.

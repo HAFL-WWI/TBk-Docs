@@ -17,7 +17,7 @@ Bereitet Rohdaten zu den Raster-Eingaben auf, die *Generate BK* benötigt.
 
 | Werkzeug | Beschreibung |
 | --- | --- |
-| **TBk prepare VHM (and MG)** | Verarbeitet das Vegetationshöhenmodell (VHM) und optional den Nadelholzanteil-Raster (Mischungsgrad/MG) zu den für *Generate BK* benötigten Eingaben: `VHM_detail`, `VHM_10m`, `VHM_150cm`, `MG_10m`, `MG_10m_binary`. |
+| **TBk prepare VHM (and MG)** | Verarbeitet das Vegetationshöhenmodell (VHM) und optional den Nadelholzanteil-Raster (Mischungsgrad/MG) zu den für *Generate BK* benötigten Eingaben: `VHM_detail`, `VHM_10m`, `VHM_150cm`, `MG_10m`, `MG_10m_binary`. ⚠️ Zur Skalierung des Mischungsgrads (0–10'000 vs. 0–100, Laub-/Nadelholz-Richtung) siehe [Achtung-Box in Workflows](workflows.md#phase-1-preprocessing). |
 
 ## c — Stand Delineation (Core)
 

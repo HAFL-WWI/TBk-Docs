@@ -13,12 +13,6 @@ Nach der Installation erscheinen alle TBk-Werkzeuge im QGIS-Fenster **Verarbeitu
 
 Details zu den einzelnen Werkzeugen: siehe [Tools](tools.md). Typische Reihenfolge/Zusammenspiel der Werkzeuge: siehe [Workflows](workflows.md).
 
-!!! warning "Achtung: Skalierung des Mischungsgrads (MG) beim Preprocessing"
-    Das Preprocessing-Werkzeug ([TBk prepare VHM (and MG)](tools.md#b-preprocessing)) erwartet den Mischungsgrad standardmässig mit Werten **0–10'000** (Default des LFI-Mischungsgrads), wobei 10'000 einem Nadelholzanteil von 100.00 % entspricht. Das steuert der erweiterte Parameter **„Rescale Forest mixture degree values“** (Default: `100`).
-
-    - Enthält das Eingaberaster bereits Werte **0–100**: den Faktor von `100` auf `1` setzen (keine Skalierung).
-    - Zeigt das Eingaberaster stattdessen den **Laubholz**-Anteil (100 = 100 % Laubholz / 0 % Nadelholz) statt des Nadelholz-Anteils: das Raster vorher mit `100 − Rasterwert` umkehren, bevor es als Eingabe verwendet wird.
-
 ## Grundlegende Bedienung
 
 Jedes TBk-Werkzeug ist ein normaler QGIS-Verarbeitungsalgorithmus:

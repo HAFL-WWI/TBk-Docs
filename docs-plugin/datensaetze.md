@@ -6,7 +6,7 @@
 | --- | --- | --- |
 | **Projektperimeter** ("Waldmaske") | Vektor (Polygon) | Deckt das gesamte zu verarbeitende Waldgebiet ab. Muss **frei von Geometrie-/Topologiefehlern** sein (keine doppelten Knoten, Überlappungen, Lücken) — sonst bricht der Algorithmus ab. Besonders fehleranfällig bei Multipolygonen mit vielen kleinen Teilen (z.B. wenn Waldwege aus dem Perimeter ausgeschnitten sind). |
 | **Vegetationshöhenmodell (VHM)** | Raster | Auflösung ≤ 1.5 m, deckt den gesamten Perimeter ab. Quelle z.B. LiDAR oder Stereo-Luftbildkorrelation. Wird vom Preprocessing-Tool auf die Auflösungen 10×10m (Bestandesbildung) und 1.5×1.5m (Ermittlung Deckungsgrad) skaliert und mit dem Mischungsgrad-Raster gemeinsam ausgerichtet. |
-| **Mischungsgrad (MG)** | Raster (optional) | Werte 0–100, beschreiben den Nadelholzanteil in % pro Pixel. Wird vom Preprocessing-Tool gemeinsam mit dem 10×10m-VHM-Raster ausgerichtet. Rohdaten liegen oft in anderer Skalierung/Richtung vor — siehe [Achtung: Skalierung des Mischungsgrads](anwendung.md#wo-finde-ich-die-werkzeuge) beim Preprocessing. |
+| **Mischungsgrad (MG)** | Raster (optional) | Werte 0–100, beschreiben den Nadelholzanteil in % pro Pixel. Wird vom Preprocessing-Tool gemeinsam mit dem 10×10m-VHM-Raster ausgerichtet. Rohdaten liegen oft in anderer Skalierung/Richtung vor — siehe [Achtung: Skalierung des Mischungsgrads](workflows.md#phase-1-preprocessing) beim Preprocessing. |
 
 Alle Eingabedaten müssen korrekt georeferenziert sein (keine Projektionsfehler) und NoData korrekt definiert haben. Sie müssen nicht zwingend im selben Koordinatensystem vorliegen, es wird aber empfohlen, vorher alle Daten in dasselbe System zu projizieren.
 

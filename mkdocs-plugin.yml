@@ -49,6 +49,41 @@ markdown_extensions:
 
 plugins:
   - search
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: de
+          name: Deutsch
+          default: true
+          build: true
+        - locale: fr
+          name: Français
+          build: true
+          nav_translations:
+            Start: Accueil
+            Anwendung: Utilisation
+            Tools: Outils
+            Datensätze: Données
+            Inhaltliche Doku →: Documentation de contenu →
+        - locale: it
+          name: Italiano
+          build: true
+          nav_translations:
+            Start: Home
+            Installation: Installazione
+            Anwendung: Utilizzo
+            Tools: Strumenti
+            Workflows: Workflow
+            Datensätze: Dati
+            Inhaltliche Doku →: Documentazione dei contenuti →
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            Start: Home
+            Anwendung: Usage
+            Datensätze: Datasets
+            Inhaltliche Doku →: Content Documentation →
   - to-pdf:
       cover_subtitle: "TBk Plugin Dokumentation (Prototyp)"
       output_path: pdf/tbk-plugin-dokumentation.pdf
@@ -57,7 +92,7 @@ nav:
   - Start: index.md
   - Installation: installation.md
   - Anwendung: anwendung.md
-  - Tools: tools.md
   - Workflows: workflows.md
+  - Tools: tools.md
   - Datensätze: datensaetze.md
   - Inhaltliche Doku →: https://HAFL-WWI.github.io/TBk-Docs/tbk/
