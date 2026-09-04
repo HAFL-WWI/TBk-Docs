@@ -33,12 +33,18 @@ jobs:
             libcairo2 shared-mime-info
           pip install -r requirements.txt
 
-      - name: Build site
-        run: mkdocs build --strict
+      - name: Build inhaltliche Doku (tbk)
+        run: mkdocs build -f mkdocs.yml --strict -d dist/tbk
+
+      - name: Build technische Doku (tbk-plugin)
+        run: mkdocs build -f mkdocs-plugin.yml --strict -d dist/tbk-plugin
+
+      - name: Add landing page
+        run: cp landing/index.html dist/index.html
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: dist
 
   deploy:
     needs: build

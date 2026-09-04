@@ -1,3 +1,38 @@
+/* Primary color: dark green (darker than #05B355), distinguishes the
+   inhaltliche Doku from the technische Doku (light green). */
+:root > * {
+  --md-primary-fg-color: #048f44;
+  --md-primary-fg-color--light: #2ba866;
+  --md-primary-fg-color--dark: #036b33;
+  --md-accent-fg-color: #048f44;
+}
+
+/* Material hardcodes link color to a blue fallback for scheme=slate +
+   primary=indigo (readability heuristic for the built-in indigo swatch) -
+   we never changed the `primary:` palette name, only its CSS variables, so
+   this fallback still fires and overrides them. Restore the link-to-primary
+   behaviour explicitly (same selector specificity, wins by source order).
+   Only matters if a visitor toggles this (light-by-default) site to Dark Mode. */
+[data-md-color-scheme="slate"][data-md-color-primary="indigo"] {
+  --md-typeset-a-color: var(--md-primary-fg-color);
+}
+
+/* Cross-link tab to the technische Doku: mark clearly as "leaves this site".
+   Sidebar copy sits on a plain background, so accent-color works there;
+   the top-bar copy sits ON the green primary color itself, so it gets a
+   translucent pill instead (accent-on-primary would be near-invisible). */
+.md-nav__link[href*="tbk-plugin"] {
+  color: var(--md-accent-fg-color) !important;
+  font-weight: 700;
+}
+.md-tabs__link[href*="tbk-plugin"] {
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 1rem;
+  padding-left: 0.8rem !important;
+  padding-right: 0.8rem !important;
+}
+
 /* Migrated Handbuch screenshots/figures have a white background baked in.
    In dark mode (slate scheme) they'd otherwise sit as a harsh white block
    directly on the dark page - wrap them in a light card instead. */

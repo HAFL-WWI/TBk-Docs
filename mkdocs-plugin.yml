@@ -1,0 +1,63 @@
+site_name: TBk Plugin Dokumentation
+site_description: Technische Dokumentation des TBk QGIS-Plugins - BFH-HAFL
+site_url: https://HAFL-WWI.github.io/TBk-Docs/tbk-plugin/
+repo_url: https://github.com/HAFL-WWI/TBk-Docs
+repo_name: HAFL-WWI/TBk-Docs
+edit_uri: edit/main/docs-plugin/
+
+docs_dir: docs-plugin
+
+theme:
+  name: material
+  language: de
+  logo: assets/img/logo.png
+  favicon: assets/img/logo.png
+  palette:
+    # no `media` query on purpose: die technische Doku startet standardmaessig
+    # im Dark Mode (Slate), anders als die inhaltliche Doku (Handbuch-
+    # Screenshots brauchen hellen Hintergrund).
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Light Mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Dark Mode
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - content.action.edit
+  icon:
+    repo: fontawesome/brands/github
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+plugins:
+  - search
+  - to-pdf:
+      cover_subtitle: "TBk Plugin Dokumentation (Prototyp)"
+      output_path: pdf/tbk-plugin-dokumentation.pdf
+
+nav:
+  - Start: index.md
+  - Installation: installation.md
+  - Anwendung: anwendung.md
+  - Tools: tools.md
+  - Workflows: workflows.md
+  - Datensätze: datensaetze.md
+  - Inhaltliche Doku →: https://HAFL-WWI.github.io/TBk-Docs/tbk/

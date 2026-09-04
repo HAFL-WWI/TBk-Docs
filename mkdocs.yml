@@ -1,6 +1,6 @@
 site_name: TBk Dokumentation
-site_description: Dokumentation des Toolkit Bestandeskarte (TBk) - BFH-HAFL
-site_url: https://HAFL-WWI.github.io/TBk-Docs/
+site_description: Inhaltliche Dokumentation des Toolkit Bestandeskarte (TBk) - BFH-HAFL
+site_url: https://HAFL-WWI.github.io/TBk-Docs/tbk/
 repo_url: https://github.com/HAFL-WWI/TBk-Docs
 repo_name: HAFL-WWI/TBk-Docs
 edit_uri: edit/main/docs/
@@ -10,6 +10,8 @@ docs_dir: docs
 theme:
   name: material
   language: de
+  logo: assets/img/logo.png
+  favicon: assets/img/logo.png
   palette:
     # no `media` query on purpose: always starts in light mode regardless of
     # OS/browser dark-mode preference, since the migrated Handbuch screenshots
@@ -73,6 +75,7 @@ plugins:
             Videos: Vidéos
             Entwicklungsstufen: Stades de développement
             Vorratsschätzung: Estimation du matériel sur pied
+            Technische Doku →: Documentation technique →
         - locale: en
           name: English
           build: true
@@ -96,6 +99,7 @@ plugins:
             Videos: Videos
             Entwicklungsstufen: Development Stages
             Vorratsschätzung: Volume Estimation
+            Technische Doku →: Technical Documentation →
   - to-pdf:
       cover_subtitle: "TBk Dokumentation (Prototyp)"
       output_path: pdf/tbk-dokumentation.pdf
@@ -120,3 +124,4 @@ nav:
       - Videos: anhang/videos.md
       - Entwicklungsstufen: anhang/entwicklungsstufen.md
       - Vorratsschätzung: anhang/vorratsschaetzung.md
+  - Technische Doku →: https://HAFL-WWI.github.io/TBk-Docs/tbk-plugin/

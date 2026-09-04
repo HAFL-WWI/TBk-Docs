@@ -1,0 +1,54 @@
+/* Primary color: helleres Gruen als die inhaltliche Doku, aber dunkler als
+   #94D252 fuer ausreichend Text-/Link-Kontrast in der Top-Bar. Heller
+   Hintergrund braucht dunklen statt weissem Text/Icons. */
+:root > * {
+  --md-primary-fg-color: #6f9e3e;
+  --md-primary-fg-color--light: #94d252;
+  --md-primary-fg-color--dark: #5e8635;
+  --md-primary-bg-color: rgba(0, 0, 0, 0.87);
+  --md-primary-bg-color--light: rgba(0, 0, 0, 0.54);
+}
+
+/* Link/Accent-Gruen je Farbschema getrennt: heller auf dem dunklen
+   Slate-Hintergrund (Default), dunkler auf Weiss im Light-Mode-Toggle -
+   sonst waere eins der beiden Kontrast-mässig zu schwach. */
+[data-md-color-scheme="slate"] {
+  --md-accent-fg-color: #94d252;
+}
+[data-md-color-scheme="default"] {
+  --md-accent-fg-color: #5e8635;
+}
+
+/* Material hardcodes link color to a blue fallback for scheme=slate +
+   primary=indigo (readability heuristic for the built-in indigo swatch) -
+   we never changed the `primary:` palette name, only its CSS variables, so
+   this fallback still fires and overrides them. Restore the link-to-primary
+   behaviour explicitly (same selector specificity, wins by source order). */
+[data-md-color-scheme="slate"][data-md-color-primary="indigo"] {
+  --md-typeset-a-color: var(--md-primary-fg-color);
+}
+
+/* Cross-Link-Tab zur inhaltlichen Doku: klar als "verlaesst diese Seite"
+   kennzeichnen. Sidebar-Kopie liegt auf normalem Hintergrund (Accent-Farbe
+   greift dort sauber), die Tab-Leisten-Kopie liegt AUF der gruenen
+   Primaerfarbe selbst - deshalb dort nur ein Chip statt Farbwechsel. */
+.md-nav__link[href*="/tbk/"] {
+  color: var(--md-accent-fg-color) !important;
+  font-weight: 700;
+}
+.md-tabs__link[href*="/tbk/"] {
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 1rem;
+  padding-left: 0.8rem !important;
+  padding-right: 0.8rem !important;
+}
+
+/* Screenshots des Plugins/QGIS haben i.d.R. einen hellen Hintergrund.
+   In dark mode (slate scheme) sonst ein harter weisser Block auf dunkler
+   Seite - stattdessen in eine helle Karte einfassen. */
+[data-md-color-scheme="slate"] .md-typeset img {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 0.4rem;
+}
